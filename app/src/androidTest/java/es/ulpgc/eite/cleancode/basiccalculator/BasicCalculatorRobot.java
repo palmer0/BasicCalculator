@@ -11,6 +11,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 public class BasicCalculatorRobot {
 
+
+
     public void calculatorShowsInFirstOperandTheValueP1(String op1) {
         onView(withId(R.id.op1Input)).check(matches(withText(op1)));
     }

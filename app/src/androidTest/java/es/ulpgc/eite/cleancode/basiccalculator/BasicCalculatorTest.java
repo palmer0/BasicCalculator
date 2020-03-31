@@ -1,6 +1,12 @@
 package es.ulpgc.eite.cleancode.basiccalculator;
 
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
@@ -21,6 +27,19 @@ public class BasicCalculatorTest {
         new ActivityTestRule<>(CalculatorActivity.class);
 
     public BasicCalculatorRobot robot = new BasicCalculatorRobot();
+
+    private void userRotatesTheScreen() {
+
+        Context context = ApplicationProvider.getApplicationContext();
+        int orientation = context.getResources().getConfiguration().orientation;
+        Activity activity = rule.getActivity();
+
+        if(orientation  == Configuration.ORIENTATION_PORTRAIT) {
+            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else {
+            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+    }
 
     @Test
     public void testAdditionOfTwoPositiveNumbers() {
