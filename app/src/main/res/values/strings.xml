@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+
+    <string name="add_operation">+</string>
+    <string name="sub_operation">-</string>
+    <string name="mul_operation">x</string>
+    <string name="div_operation">/</string>
+    <string name="cal_operation">=</string>
+    <string name="cal_result"></string>
+    <string name="cal_operator1"></string>
+    <string name="cal_operator2"></string>
+</resources>
