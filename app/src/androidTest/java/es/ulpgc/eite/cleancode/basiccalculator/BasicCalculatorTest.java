@@ -31,13 +31,18 @@ public class BasicCalculatorTest {
     private void userRotatesTheScreen() {
 
         Context context = ApplicationProvider.getApplicationContext();
-        int orientation = context.getResources().getConfiguration().orientation;
+        int orientation= context.getResources().getConfiguration().orientation;
         Activity activity = rule.getActivity();
 
         if(orientation  == Configuration.ORIENTATION_PORTRAIT) {
-            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            activity.setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            );
+
         } else {
-            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            activity.setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            );
         }
     }
 
