@@ -21,6 +21,7 @@ public class CalculatorActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_calculator);
     getSupportActionBar().setTitle(R.string.app_name);
+    getSupportActionBar().hide();
 
     // do the setup
     CalculatorScreen.configure(this);
