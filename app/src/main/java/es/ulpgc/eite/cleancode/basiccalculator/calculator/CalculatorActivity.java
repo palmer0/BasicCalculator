@@ -20,7 +20,7 @@ public class CalculatorActivity
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_calculator);
-    getSupportActionBar().setTitle(R.string.app_name);
+    //getSupportActionBar().setTitle(R.string.app_name);
     getSupportActionBar().hide();
 
     // do the setup
