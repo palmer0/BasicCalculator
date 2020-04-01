@@ -28,6 +28,7 @@ public class BasicCalculatorTest {
 
     public BasicCalculatorRobot robot = new BasicCalculatorRobot();
 
+
     private void userRotatesTheScreen() {
 
         Context context = ApplicationProvider.getApplicationContext();
