@@ -14,7 +14,8 @@ public class CalculatorScreen {
         new WeakReference<>((FragmentActivity) view);
 
 
-    AppMediator mediator = (AppMediator) context.get().getApplication();
+    //AppMediator mediator = (AppMediator) context.get().getApplication();
+    AppMediator mediator = AppMediator.getInstance();
     CalculatorState state = mediator.getCalculatorState();
 
     CalculatorContract.Router router = new CalculatorRouter(mediator);

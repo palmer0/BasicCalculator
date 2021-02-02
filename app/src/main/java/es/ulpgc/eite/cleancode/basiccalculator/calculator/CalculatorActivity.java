@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import es.ulpgc.eite.cleancode.basiccalculator.R;
+import es.ulpgc.eite.cleancode.basiccalculator.app.AppMediator;
 
 public class CalculatorActivity
     extends AppCompatActivity implements CalculatorContract.View {
@@ -22,6 +23,10 @@ public class CalculatorActivity
     setContentView(R.layout.activity_calculator);
     //getSupportActionBar().setTitle(R.string.app_name);
     getSupportActionBar().hide();
+
+    if (savedInstanceState == null) {
+      AppMediator.resetInstance();
+    }
 
     // do the setup
     CalculatorScreen.configure(this);
