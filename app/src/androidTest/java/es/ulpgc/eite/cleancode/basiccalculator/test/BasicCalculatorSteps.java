@@ -29,7 +29,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 public class BasicCalculatorSteps {
 
   @Rule
-  public ActivityTestRule<CalculatorActivity> questionTestRule =
+  public ActivityTestRule<CalculatorActivity> testRule =
       new ActivityTestRule(CalculatorActivity.class, true, false);
 
   private Activity activity;
@@ -54,13 +54,13 @@ public class BasicCalculatorSteps {
 
   @Before("@calculator-feature")
   public void setUp() {
-    questionTestRule.launchActivity(new Intent());
-    activity = questionTestRule.getActivity();
+    testRule.launchActivity(new Intent());
+    activity = testRule.getActivity();
   }
 
   @After("@calculator-feature")
   public void tearDown() {
-    questionTestRule.finishActivity();
+    testRule.finishActivity();
   }
 
   @Given("^Calculator shows in first operand the value \"([^\"]*)\"$")
