@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.eite.cleancode.basiccalculator.app.AppMediator;
+
 public class CalculatorPresenter implements CalculatorContract.Presenter {
 
   public static String TAG = CalculatorPresenter.class.getSimpleName();
@@ -11,10 +13,18 @@ public class CalculatorPresenter implements CalculatorContract.Presenter {
   private WeakReference<CalculatorContract.View> view;
   private CalculatorState state;
   private CalculatorContract.Model model;
-  private CalculatorContract.Router router;
+  //private CalculatorContract.Router router;
+  private AppMediator mediator;
 
+  /*
   public CalculatorPresenter(CalculatorState state) {
     this.state = state;
+  }
+  */
+
+  public CalculatorPresenter(AppMediator mediator) {
+    this.mediator = mediator;
+    state = mediator.getCalculatorState();
   }
 
   @Override
@@ -134,8 +144,11 @@ public class CalculatorPresenter implements CalculatorContract.Presenter {
     this.model = model;
   }
 
+  /*
   @Override
   public void injectRouter(CalculatorContract.Router router) {
     this.router = router;
   }
+  */
+
 }
