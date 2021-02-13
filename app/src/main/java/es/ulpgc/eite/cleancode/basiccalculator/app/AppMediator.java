@@ -26,14 +26,6 @@ public class AppMediator {
     return INSTANCE;
   }
 
-
-//  @Override
-//  public void onCreate() {
-//    super.onCreate();
-//
-//    state = new CalculatorState();
-//  }
-
   public CalculatorState getCalculatorState() {
     return state;
   }

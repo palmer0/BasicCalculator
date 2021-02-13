@@ -17,7 +17,6 @@ public interface CalculatorContract {
   interface Presenter {
     void injectView(WeakReference<View> view);
     void injectModel(Model model);
-    //void injectRouter(Router router);
 
     void onResume();
     void onStart();
@@ -45,9 +44,4 @@ public interface CalculatorContract {
     String getOperation();
   }
 
-  /*
-  interface Router {
-
-  }
-  */
 }

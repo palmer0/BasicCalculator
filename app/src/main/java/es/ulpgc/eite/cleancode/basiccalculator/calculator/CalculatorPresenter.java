@@ -13,14 +13,8 @@ public class CalculatorPresenter implements CalculatorContract.Presenter {
   private WeakReference<CalculatorContract.View> view;
   private CalculatorState state;
   private CalculatorContract.Model model;
-  //private CalculatorContract.Router router;
   private AppMediator mediator;
 
-  /*
-  public CalculatorPresenter(CalculatorState state) {
-    this.state = state;
-  }
-  */
 
   public CalculatorPresenter(AppMediator mediator) {
     this.mediator = mediator;
@@ -143,12 +137,5 @@ public class CalculatorPresenter implements CalculatorContract.Presenter {
   public void injectModel(CalculatorContract.Model model) {
     this.model = model;
   }
-
-  /*
-  @Override
-  public void injectRouter(CalculatorContract.Router router) {
-    this.router = router;
-  }
-  */
 
 }

@@ -14,16 +14,11 @@ public class CalculatorScreen {
         new WeakReference<>((FragmentActivity) view);
 
 
-    //AppMediator mediator = (AppMediator) context.get().getApplication();
     AppMediator mediator = AppMediator.getInstance();
-    //CalculatorState state = mediator.getCalculatorState();
 
-    //CalculatorContract.Router router = new CalculatorRouter(mediator);
-    //CalculatorContract.Presenter presenter = new CalculatorPresenter(state);
     CalculatorContract.Presenter presenter = new CalculatorPresenter(mediator);
     CalculatorContract.Model model = new CalculatorModel();
     presenter.injectModel(model);
-    //presenter.injectRouter(router);
     presenter.injectView(new WeakReference<>(view));
 
     view.injectPresenter(presenter);
