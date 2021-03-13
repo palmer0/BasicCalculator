@@ -20,7 +20,7 @@ import es.ulpgc.eite.cleancode.basiccalculator.calculator.CalculatorActivity;
 @SuppressWarnings("ALL")
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class BasicCalculatorTest {
+public class BasicCalculatorTests {
 
 
     @Rule
